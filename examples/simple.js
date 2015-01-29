@@ -9,4 +9,6 @@ var entryWheel    = new enigmajs.EntryWheel('ABCDEFGHIJKLMNOPQRSTUVWXYZ');
 
 var enigma = new enigmajs.Enigma([rotorI, rotorIV, rotorIII], reflector, plugboard, entryWheel);
 
-console.log( enigma.string( 'EXAMPLEMESSAGE' ) );
+var plainText = process.argv[2] || 'EXAMPLEMESSAGE';
+
+console.log(enigma.string(plainText));
